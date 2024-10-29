@@ -23,7 +23,7 @@
                         <div class="md:w-1/2 text-right">
                             @can('create', App\Models\Registro::class)
                             <a href="{{ route('registros.create') }}" class="button button-primary">
-                            <i class="fa-solid fa-file-circle-plus fa-2xl" style="color: #FFD43B;"></i>
+                                <i class="fa-solid fa-file-circle-plus fa-2xl" style="color: #FFD43B;"></i>
                                 @lang('')
                             </a>
                             @endcan
@@ -123,31 +123,15 @@
 
                                         </form>
                                         @endcan
-                                        <br>
+
                                         <form action="{{ route('registros.duplicar', $registro->id) }}" method="POST"
                                             style="display:inline;">
                                             @csrf
-
-
-                                            <button id="x1" type="button" class="button">
+                                            <button id="" type="submit" class="button">
                                                 <i class="fa-solid fa-person-walking-dashed-line-arrow-right fa-xl"
                                                     style="color: #FFD43B;"></i> </button>
-
-
                                         </form>
-
-
-
-
-
-
                                     </div>
-
-
-
-
-
-
 
                                 </td>
                             </tr>
