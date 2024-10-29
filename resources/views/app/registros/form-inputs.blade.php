@@ -4,7 +4,7 @@
     <x-inputs.group class="w-full lg:w-3/12">
         <x-inputs.text
             name="rut"
-            label="Rut"
+            label="RUT"
             :value="old('rut', ($editing ? $registro->rut : ''))"
             maxlength="255"
             placeholder="Rut"
@@ -15,7 +15,7 @@
     <x-inputs.group class="w-full lg:w-5/12">
         <x-inputs.text
             name="nombres"
-            label="Nombres"
+            label="NOMBRES"
             :value="old('nombres', ($editing ? $registro->nombres : ''))"
             maxlength="255"
             placeholder="Nombres"
@@ -26,7 +26,7 @@
     <x-inputs.group class="w-full lg:w-5/12">
         <x-inputs.text
             name="apellidos"
-            label="Apellidos"
+            label="APELLIDOS"
             :value="old('apellidos', ($editing ? $registro->apellidos : ''))"
             maxlength="255"
             placeholder="Apellidos"
@@ -35,9 +35,9 @@
     </x-inputs.group>
 
     <x-inputs.group class="w-full lg:w-5/12">
-        <x-inputs.select name="proveedor_id" label="Proveedor" required>
+        <x-inputs.select name="proveedor_id" label="PROVEEDOR" required>
             @php $selected = old('proveedor_id', ($editing ? $registro->proveedor_id : '')) @endphp
-            <option disabled {{ empty($selected) ? 'selected' : '' }}>Please select the Proveedor</option>
+            <option disabled {{ empty($selected) ? 'selected' : '' }}>SELECT...</option>
             @foreach($proveedors as $value => $label)
             <option value="{{ $value }}" {{ $selected == $value ? 'selected' : '' }} >{{ $label }}</option>
             @endforeach
@@ -47,18 +47,18 @@
     <x-inputs.group class="w-full lg:w-5/12">
         <x-inputs.text
             name="motivo"
-            label="Motivo"
+            label="MOTIVO"
             :value="old('motivo', ($editing ? $registro->motivo : ''))"
             maxlength="255"
-            placeholder="Motivo"
+            placeholder="Ingrese motivo de la visita al centro de datos"
             required
         ></x-inputs.text>
     </x-inputs.group>
 
     <x-inputs.group class="w-full lg:w-5/12">
-        <x-inputs.select name="estado_id" label="Estado" required>
+        <x-inputs.select name="estado_id" label="ESTADO" required>
             @php $selected = old('estado_id', ($editing ? $registro->estado_id : '')) @endphp
-            <option disabled {{ empty($selected) ? 'selected' : '' }}>Please select the Estado</option>
+            <option disabled {{ empty($selected) ? 'selected' : '' }}>SELECT...</option>
             @foreach($estados as $value => $label)
             <option value="{{ $value }}" {{ $selected == $value ? 'selected' : '' }} >{{ $label }}</option>
             @endforeach
@@ -66,9 +66,9 @@
     </x-inputs.group>
 
     <x-inputs.group class="w-full lg:w-5/12">
-        <x-inputs.select name="user_id" label="User" required>
+        <x-inputs.select name="user_id" label="FUNCIONARIO ENCARGADO" required>
             @php $selected = old('user_id', ($editing ? $registro->user_id : '')) @endphp
-            <option disabled {{ empty($selected) ? 'selected' : '' }}>Please select the User</option>
+            <option disabled {{ empty($selected) ? 'selected' : '' }}>SELECT...</option>
             @foreach($users as $value => $label)
             <option value="{{ $value }}" {{ $selected == $value ? 'selected' : '' }} >{{ $label }}</option>
             @endforeach

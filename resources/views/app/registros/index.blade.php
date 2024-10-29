@@ -23,8 +23,8 @@
                         <div class="md:w-1/2 text-right">
                             @can('create', App\Models\Registro::class)
                             <a href="{{ route('registros.create') }}" class="button button-primary">
-                                <i class="mr-1 icon ion-md-add"></i>
-                                @lang('crud.common.create')
+                            <i class="fa-solid fa-file-circle-plus fa-2xl" style="color: #FFD43B;"></i>
+                                @lang('')
                             </a>
                             @endcan
                         </div>
