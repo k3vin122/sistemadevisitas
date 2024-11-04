@@ -22,7 +22,11 @@ class Registro extends Model
         'is_duplicated',
     ];
 
+    protected $perPage = 100000;
+
+
     protected $searchableFields = ['*'];
+
 
 
     public function estado()

@@ -87,7 +87,6 @@
                             <tr>
                                 <td colspan="3">
                                     <div class="mt-10 px-4">
-                                        {!! $proveedors->render() !!}
                                     </div>
                                 </td>
                             </tr>

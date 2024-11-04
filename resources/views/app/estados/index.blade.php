@@ -80,7 +80,6 @@
                             <tr>
                                 <td colspan="2">
                                     <div class="mt-10 px-4">
-                                        {!! $estados->render() !!}
                                     </div>
                                 </td>
                             </tr>

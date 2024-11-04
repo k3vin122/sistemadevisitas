@@ -20,7 +20,7 @@
 
     <!-- cdn iconos awesome -->
     <link rel="stylesheet" href="/plugins/font-awesome/css/all.min.css">
-  <!-- cdn iconos awesome -->
+    <!-- cdn iconos awesome -->
 
 
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.dataTables.css">
@@ -36,6 +36,9 @@
 
     @livewireStyles
 </head>
+
+
+
 
 @section('content')
 @if (session('message'))
@@ -105,7 +108,66 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous">
     </script>
-    <!-- Estilos bootstrap  -->
+    <!--  Fin Estilos bootstrap  -->
+
+
+    <!-- Estilos tablas  -->
+
+    <style>
+    /* Estilo para los encabezados */
+    th {
+        background-color: #f2f2f2;
+        /* Color de fondo de encabezados */
+        font-weight: bold;
+        /* Negrita para encabezados */
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        /* Permite que los elementos se envuelvan */
+        justify-content: space-around;
+        /* Espaciado entre elementos */
+        padding: 20px;
+        /* Espaciado interno */
+    }
+
+    .box {
+        background-color: #4CAF50;
+        /* Color de fondo */
+        color: white;
+        /* Color del texto */
+        padding: 20px;
+        /* Espaciado interno */
+        margin: 10px;
+        /* Espaciado externo */
+        border-radius: 5px;
+        /* Bordes redondeados */
+        flex: 1 1 200px;
+        /* Crece y se encoge, con un ancho base de 200px */
+        text-align: center;
+        /* Centra el texto */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        /* Sombra para un efecto de profundidad */
+    }
+
+    @media (max-width: 600px) {
+        .box {
+            flex: 1 1 100%;
+            /* En pantallas pequeñas, cada caja ocupará el 100% del ancho */
+        }
+    }
+    </style>
+
+    <!-- fin Estilos tablas  -->
+
+
+
 
 
 
@@ -177,6 +239,13 @@
     $(document).ready(function() {
         $('#miTabla').DataTable({
 
+            "language": {
+                "url": "//cdn.datatables.net/plug-ins/1.10.15/i18n/Spanish.json"
+            },
+
+            "paging": true, // Habilitar paginación
+            "pageLength": 5,
+
 
             dom: 'Bfrtip', // Esto añade los botones encima de la tabla
             buttons: [{
@@ -195,6 +264,7 @@
                     title: 'Datos de la Tabla' // Título de la impresión
                 }
             ]
+
 
         });
 

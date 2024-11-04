@@ -56,7 +56,7 @@ class RegistroController extends Controller
 
         $registros = Registro::search($search)
             ->latest()
-            ->paginate(5)
+            ->paginate()
             ->withQueryString();
 
         return view('app.registros.index', compact('registros', 'search'));
